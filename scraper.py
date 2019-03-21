@@ -121,7 +121,7 @@ def scrape_twitchtracker():
     total_followers = 0
 
     # Scrapes data over 10 pages of highest subbed Twitch streamers
-    for page in range(10, 11):
+    for page in range(1, 11):
         page_soup = souper(url + str(page))
         channels = page_soup.find("table", id="channels").tbody.findAll("tr")
         # Iterates through each channel on page
